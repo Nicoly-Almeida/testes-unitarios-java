@@ -36,6 +36,7 @@ public class Aluno {
     }
 
     public void setMatricula(String matricula) {
+        if (matricula.length() != 11 || !matricula.matches("[0-9]+")) throw new RuntimeException();
         this.matricula = matricula;
     }
 
